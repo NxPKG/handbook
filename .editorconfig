@@ -1,0 +1,9 @@
+[*]
+end_of_line = lf
+trim_trailing_whitespace = true
+charset = utf-8
+indent_style = space
+indent_size = 2
+
+[*.{ts,tsx,mjs,css,scss}]
+indent_size = 4

@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../schema/use_cases.schema.json
+
+developer_onboarding:
+  title: Developer Onboarding
+  link: /strategy-goals/strategy/use_cases/dev-onboarding
+  sponsors:
+    product: steve_yegge
+    engineering: peter_guy
+
+code_reuse:
+  title: Code Reuse
+  link: /strategy-goals/strategy/use_cases/code_reuse
+  sponsors:
+    product: taylor_sperry
+    engineering: robert_lin
+
+code_health:
+  title: Code Health
+  link: /strategy-goals/strategy/use_cases/code_health
+  sponsors:
+    engineering: joe_chen
+
+code_security:
+  title: Code security
+  link: /strategy-goals/strategy/use_cases/code_security
+  sponsors:
+    engineering: erika_rice_scherpelz
+
+incident_response:
+  title: Incident Response
+  link: /strategy-goals/strategy/use_cases/incident_response
+  sponsors:
+    engineering: dax_mcdonald

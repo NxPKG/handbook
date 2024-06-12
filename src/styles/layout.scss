@@ -1,0 +1,156 @@
+/* GLOBAL */
+:root {
+    --font-family: 'Source Sans Pro', sans-serif;
+    --font-family-code: 'Source Code', monospace;
+
+    --breakpoint-width: 900px;
+    --text-color: var(--gray-08);
+    --link-color: #0b70db;
+    --link-hover-color: #1986ea;
+    --link-active-color: #1986ea;
+    --border-color: var(--gray-02);
+    --body-bg: var(--gray-01);
+    --header-bg: #ffffff;
+    --left-sidebar-width: 13.75rem;
+    --left-sidebar-margin-right: 3.75rem;
+    --width: 1200px;
+    --spacing: 1.25rem;
+    --logo-height: 1.75rem;
+    --logo-padding-y: 0.25rem;
+    --header-height: 4.5rem;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* UTILITIES */
+.container {
+    max-width: var(--width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Scroll slightly beyond in-page anchor so that the fixed header doesn't obscure it. */
+:not(.anchor-inline):target {
+    /* Scroll so that header anchors are at the top of the viewport. */
+    scroll-margin-top: var(--header-height);
+}
+.anchor-inline:target {
+    /* Scroll so that inline anchors are at the center (vertically) of the viewport. */
+    scroll-margin-top: 50vh;
+}
+.anchor-inline + .anchor-inline-link::before {
+    content: '🔗';
+    width: 1rem;
+    height: 1rem;
+    padding-left: 0.2em;
+}
+.anchor-inline:target + .anchor-inline-link {
+    background-color: var(--sg-yellow-2);
+    border: solid 1px var(--sg-yellow-3);
+    display: inline-block;
+    padding: 0.1rem;
+    margin: -0.1rem;
+}
+
+/* HEADER */
+#header {
+    position: sticky;
+    height: var(--header-height);
+    top: 0;
+    z-index: 1;
+    background-color: var(--header-bg);
+    display: flex;
+    align-items: center;
+}
+
+#header > .container {
+    display: flex;
+    align-items: center;
+}
+#header #logo {
+    flex: 0 0 auto;
+    width: var(--left-sidebar-width);
+    margin-right: var(--left-sidebar-margin-right);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    color: inherit;
+    text-decoration: none;
+    padding-top: var(--logo-padding-y);
+    padding-bottom: var(--logo-padding-y);
+
+    @include media-breakpoint-down(lg) {
+        width: auto;
+        margin-right: 1rem;
+    }
+}
+#header #logo img {
+    height: var(--logo-height);
+}
+
+/* FOOTER */
+footer {
+    border-top: solid 1px var(--border-color);
+    padding: calc(1.5 * var(--spacing)) 0;
+    font-size: 80%;
+}
+footer nav.links ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+footer nav.links ul li {
+}
+footer a {
+    color: var(--text-muted);
+    white-space: nowrap;
+    padding: calc(0.25 * var(--spacing)) calc(0.5 * var(--spacing));
+    margin-bottom: calc(0.75 * var(--spacing));
+    margin-right: calc(0.75 * var(--spacing));
+}
+
+.header-external-links {
+    display: flex;
+    gap: 1rem;
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+
+/* PAGE */
+@media (max-width: 900px) {
+    .visible-sm {
+        display: unset;
+    }
+    .visible-lg {
+        display: none;
+    }
+}
+@media (min-width: 900px) {
+    .visible-sm {
+        display: none;
+    }
+    .visible-lg {
+        display: unset;
+    }
+}
+
+.container-md {
+    max-width: 1140px;
+}

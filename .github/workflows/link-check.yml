@@ -1,0 +1,22 @@
+name: Check all links between pages are valid
+
+on: push
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout repository
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: package.json
+      - uses: pnpm/action-setup@v2
+        with:
+          run_install: true
+      - name: Check all links between pages are valid
+        env:
+          FORCE_COLOR: 3
+          NPM_CONFIG_LOGLEVEL: silent
+        run: pnpm -s check-links

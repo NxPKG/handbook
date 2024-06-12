@@ -1,0 +1,231 @@
+# yaml-language-server: $schema=../schema/glossary.schema.json
+
+technical:
+  - term: GQL
+    definition: GraphQL (a type of API, sort of like HTTP or Rest APIs)
+  - term: VSCE
+    definition: VS Code Extension, referring to either the Sourcegraph integration extension for the VS Code IDE, or the Microsoft tool called 'vsce' used to publish extensions
+  - term: Bext
+    definition: Brower extension, sometimes pronounced literally as "bext" or "baxt"
+  - term: LSIF
+    definition: Language Server index Format, a specification created by Microsoft which Sourcegraph uses to provide code intelligence.
+  - term: RFC
+    definition: Request for comments
+  - term: RFH
+    definition: Request for help
+  - term: RCE
+    definition: Remote code execution (a security vulnerability)
+  - term: MSP
+    definition: Managed Services Platform. The standardized tooling and infrastructure for deploying and operating managed Sourcegraph services.
+  - term: SAMS
+    definition: Sourcegraph Accounts Management System. The centralized accounts system for all of the Sourcegraph-operated systems.
+  - term: SSC
+    definition: Self-Serve Cody. The system that lets PLG customers sign up for Sourcegraph and manage their subscription.
+  - term: SSRF
+    definition: Server side request forgery (a security vulnerability)
+  - term: SEO
+    definition: Search engine optimization, making Google understand our web pages better
+  - term: SSBC
+    definition: Server-side batch changes. Large scale code refactoring that runs as part of the Sourcegraph server, rather than on a developer's laptop.
+  - term: POC
+    definition: Proof of concept
+  - term: PR
+    definition: Pull request, where code is sent to be reviewed before becoming a part of the product
+  - term: TODO
+    definition: A note left in the code as a comment indicating something we should do
+  - term: DFS
+    definition: Damn Fine Source code
+  - term: Easy stamp, stamp please
+    definition: Change that needs approval but not review
+  - term: CI
+    definition: Continuous Integration, a server that runs our tests and ensures things are not broken. Often stated as "CI is failing" and "CI is slow"
+  - term: Dogfood
+    definition: Either k8s.sgdev.org (the "dogfood" instance) or just saying "we should try what we built" in general
+  - term: dev
+    definition: Someone who can barely write code, but does so professionally
+  - term: k8s
+    definition: Kubernetes, a thing for deploying software across multiple computers. The "8" is because there are 8 characters between the letter K and s. K`ubernete`s
+  - term: a11y
+    definition: Accessibility, the "11" is because there are 11 characters between the letter A and Y. a`ccessibilit`y
+  - term: i18n
+    definition: Internationalization, like having the UI show in multiple languages.
+  - term: GCP
+    definition: Google Cloud Platform, servers hosted on Google's cloud
+  - term: AWS
+    definition: Amazon Web Services, servers hosted on Amazon's cloud
+  - term: SMTP
+    definition: Simple Mail Transfer Protocol, email server protocol
+  - term: IMAP
+    definition: Internet Message Access Protocol, email server protocol
+  - term: IDE
+    definition: Integrated Developer Environment, the text editor people use to write code
+  - term: HG
+    definition: Horse Graph
+  - term: Standup
+    definition: Everyone sits down for 15/30/60m and says what they are doing. Sometimes they just type it.
+  - term: pgsql/psql
+    definition: Postgres database
+  - term: MVP
+    definition: Minimum viable product, the bare minimum needed to see a feature working for example. Think "very early stages, experimental"
+  - term: MVC
+    definition: Model-View-Controller frontend/JavaScript pattern. React. Google "MVC"
+  - term: TDD
+    definition: Test driven development, you write the tests before you write the code that would pass the tests.
+  - term: API
+    definition: Application programming interface; like when your browser makes a request to your bank's web server to send money
+  - term: DOM
+    definition: Document Object Model, a tree of buttons/text/etc that are displayed in browsers. "The DOM" refers to all the stuff making up the web page.
+  - term: LOC
+    definition: Lines of code
+  - term: LOE
+    definition: Level of effort
+  - term: FSM
+    definition: Finite-state machine. An abstract machine that can be in exactly one of a finite number of states at any given time. See https://en.wikipedia.org/wiki/Finite-state_machine
+  - term: dotcom
+    definition: Sourcegraph.com
+  - term: airgapped instance
+    definition: Self-hosted customer instance that does not allow any outbound network requests; offline to any external network requests.
+  - term: private instance
+    definition: Self-hosted customer instance that does not share telemetry data (to be enforced via license tagging); does allow outbound network requests.
+  - term: airgapped code host
+    definition: A code host that is physically isolated from the internet. For example, the code host is deployed on hardware (server) that is within the customers' office/private data center and the only way to connect to this code host is to be physically connected to this air-gapped network; a user has to be within the office and be connected to the air-gapped office network via ethernet cable of wi-fi.
+  - term: private code host
+    definition: A code host deployed in a private network (for example AWS EC2 instance within VPC).
+  - term: public code host
+    definition: A code host that is publicly accessible on the internet - a user can CURL it via IP or open the URL in the browser. This also includes a code host with a public interface but restricts access to IP allowlist.
+  - term: KTLM
+    definition: Keeping The Lights On, time set aside during each product cycle for handling bug reports, user feedback, general maintenance, dealing with tech debt, etc.
+
+business:
+  - term: CAC
+    definition: Customer acquisition cost (how much $ spent to win a new customer)
+  - term: ICP
+    definition: Ideal customer profile (the hypothetical perfect customer for your organization; lists all of the qualities that make them the best fit for the solutions you provide.)
+  - term: LCV
+    definition: Lifetime customer value (the total revenue a customer will generate for a business throughout the relationship)
+  - term: B2B
+    definition: Business to business, i.e. we sell to other businesses
+  - term: B2C
+    definition: Business to consumer, i.e. we sell directly to individual consumers
+  - term: GA
+    definition: General availability, either "lol we shipped to prod" (unusual?) or "it was approved by marketing, legal, product, there were design docs, etc."
+  - term: ROI
+    definition: Return on investment
+  - term: WoW
+    definition: Week over week, "We currently have 2% WoW revenue growth" means that last week had 2% more revenue than the previous week.
+  - term: Q1
+    definition: First quarter of the year. At Sourcegraph, we use a [fiscal year](../../departments/finance#fiscal-years) that is offset from the calendar year.
+  - term: FY22
+    definition: Fiscal Year 2022. BEWARE - FY22 Q1 means the first quarter of _2021_ not _2022_
+  - term: NPS score
+    definition: One of those "please rate our product on a scale of 1-10" things. Google it for more info.
+  - term: ARR
+    definition: Annual Recurring Revenue - if we have a contract with a customer over any timeframe, how much we get in a one year period.
+  - term: IARR
+    definition: The change in ARR from one period to another.
+  - term: New IARR
+    definition: IARR, but only including new customers
+  - term: Expansion IARR
+    definition: IARR from customers who we already had at the start of the period
+  - term: Booking
+    definition: A customer committed to paying us money, a new customer signing a contract, a contract signed to expand the number of seats, etc.
+  - term: AP
+    definition: Accounts Payable, i.e. our own bills we can pay right now
+  - term: ACV
+    definition: Annual Contract Value. The ACV sales metric enables businesses to track the value of individual customer contracts over a year. Basically, it’s the average annual dollar amount a contract is worth, excluding any one-time fees or purchases.
+  - term: AR
+    definition: Accounts Receivable, [bills customers should pay to us](../../departments/finance/process/ar.md)
+  - term: Cash, AR, AP, Accruals, and Deferred Revenue
+    definition: Very specific terms defined [here](../../departments/finance#financial-planning-and-financial-statement-review)
+  - term: CLA
+    definition: Contributor license agreement, non-employees must sign this before contributing code
+  - term: UX
+    definition: User experience, the experience a user would have going through a flow for example
+  - term: UI
+    definition: User interface, how buttons look, the layout, etc.
+  - term: SaaS
+    definition: Software as a service
+  - term: PQL
+    definition: '[Product Qualified lead](../../departments/bizops/process/product_led_growth.md)'
+  - term: PLG
+    definition: '[Product led growth](../../departments/bizops/process/product_led_growth.md)'
+  - term: MQL
+    definition: '[Marketing qualified lead](../../departments/bizops/process/product_led_growth.md)'
+  - term: SLA
+    definition: Service level agreement
+  - term: Golink
+    definition: Canonical, internal-only link for a piece of information in the form of "go/..." link (ex. [go/glossary](https://go/glossary))
+  - term: EOQ
+    definition: End Of Quarter
+  - term: KTLO
+    definition: Keep The Lights On. The minimum engineering maintenance work required to keep the product running and keep customers happy.
+  - term: OTE
+    definition: On-Target-Earning. An individual's compensation package is composed of base pay and/or commission. Where applicable, OTE is the total compensation an individual can expect to earn if they achieve all of their targets. For individuals without commission, this is just their salary.
+  - term: OTI
+    definition: On-Target-Incentive. Specifically the commission or incentive portion of an individual's compensation package. Where applicable, Base Salary + OTI = OTE.
+
+role:
+  - term: EPD
+    definition: Engineering, Product, Design - refers to the department that includes those three teams.
+  - term: AE
+    definition: Account executive - responsible for maintaining an enterprise customer account and our relationship with them
+  - term: CE
+    definition: Customer Engineer, e.g. pre-sales engineer
+  - term: IE
+    definition: Implementation Engineer
+  - term: TA
+    definition: Technical Advisory, e.g, post-sales customer success
+  - term: SE
+    definition: Support engineer
+  - term: SDR
+    definition: Sales Development reps - focused on reaching out to customers, determining if they're good leads to follow up on
+  - term: MBA
+    definition: Master of Business Administration - a degree, not to be confused with the NBA which is a basketball team
+  - term: GTM
+    definition: Go to market
+  - term: EM
+    definition: Engineering manager
+  - term: PM
+    definition: Product manager
+  - term: PD
+    definition: Product designer
+  - term: PO
+    definition: Purchase order
+  - term: IC
+    definition: Individual contributor, not managing other people. Still works on a team with other ICs.
+  - term: Releases team (formerly Release Guild)
+    definition: A captain of releasing the product, drives releases, gathers and informs others about the release, helps test the release, fixes and discovers issues in the release before it goes out.
+  - term: DevRel
+    definition: Developer relations, they post on Hacker News, Reddit, and Twitter about how cool we are. They give talks and go to conferences
+  - term: DevInfra
+    definition: Developer infrastructure, improving lives of devs working on sourcegraph
+  - term: People ops
+    definition: The HR department, scheduling interviews etc.
+  - term: Biz ops
+    definition: Business operations, like financial modeling, managing legal aspects, etc
+  - term: IT tech ops
+    definition: IT team, if you have laptop issues or need to order a computer
+  - term: Ops
+    definition: Operations (includes Finance, Accounting, Legal, People, Data & Analytics, Strategy, and Tech Ops)
+  - term: DRI
+    definition: Directly responsible individual, the "one true owner" of something
+
+general:
+  - term: PTAL
+    definition: Please take a look
+  - term: LGTM
+    definition: Looks good to me
+  - term: SGTM
+    definition: Sounds good to me
+  - term: IIUC
+    definition: If I understand correctly
+  - term: ICYMI
+    definition: In case you missed it
+  - term: NBD
+    definition: No big deal / not a big deal
+  - term: AFAIK
+    definition: As far as I know
+  - term: LFG
+    definition: Looking for Gutekanst - sometimes Looking for Group
+  - term: YAGNI
+    definition: You aren't gonna need it

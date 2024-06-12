@@ -1,0 +1,40 @@
+name: Check handbook builds correctly
+
+on:
+  - push
+
+jobs:
+  # geojson:
+  #   name: Teammate locations file is valid
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-node@v2
+  #     - name: install geojsonhint
+  #       run: yarn add @mapbox/geojsonhint@3.0.0
+  #     - name: geojsonhint
+  #       run: node_modules/.bin/geojsonhint < ./handbook/company/team/locations.geojson
+
+  # Put everything under one job to not clutter the GitHub status checks list.
+  build:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_COLOR: 3
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout repository
+        with:
+          fetch-depth: 0 # We analyze Git history for generating redirects
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: package.json
+      - uses: pnpm/action-setup@v2
+        with:
+          run_install: true
+      - run: pnpm typecheck
+        name: Type-check code with TypeScript compiler
+      - run: pnpm eslint
+        name: Lint code with ESLint
+      - run: pnpm build
+        name: Build handbook with NextJS

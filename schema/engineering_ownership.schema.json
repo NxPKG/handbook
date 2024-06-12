@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "product_team": {
+        "type": "string"
+      },
+      "domain_experts": {
+        "type": "string"
+      },
+      "slack_channels": {
+        "type": "string"
+      },
+      "ownership_model": {
+        "type": "string"
+      },
+      "health": {
+        "type": "string"
+      },
+      "product_lifecycle": {
+        "type": "string"
+      }
+    },
+    "required": ["category", "title"]
+  }
+}
